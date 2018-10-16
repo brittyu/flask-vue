@@ -5,8 +5,10 @@
           <el-menu-item class="search">
             <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="search"></el-input>
           </el-menu-item>
-          <el-menu-item index="4" route="login" id="login"><img class="avatar" src="https://shp.qpic.cn/readnovel/0/1/100" alt=""></el-menu-item>
-          <el-menu-item index="3" id="message" class="el-icon-message"></el-menu-item>
+          <!-- <el-menu-item index="4" route="login" id="login"><img class="avatar" src="https://shp.qpic.cn/readnovel/0/1/100" alt=""></el-menu-item> -->
+          <el-menu-item index="login" id="login" class="el-icon-info">登录</el-menu-item>
+          <el-menu-item index="register" id="register" class="el-icon-warning">注册</el-menu-item>
+          <el-menu-item index="message" id="message" class="el-icon-message"></el-menu-item>
           <el-menu-item index="2" id="bookshelf" class="el-icon-goods">我的书架</el-menu-item>
         </el-menu>
         <el-menu :router="true" :default-active="activeIndex" mode="horizontal" @select="handleSelect" class="menu">
@@ -55,7 +57,12 @@ export default {
 #header {
   border-bottom: none;
 }
-#register, #login, #bookshelf, #message, #writer, #recharge {
+#register,
+#login,
+#bookshelf,
+#message,
+#writer,
+#recharge {
   float: right;
 }
 </style>

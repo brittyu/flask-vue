@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import HotBlock from './HotBlock.vue'
-import AnnouncementBlock from './AnnouncementBlock.vue'
-import AdBlock from './AdBlock.vue'
-import NewBlock from './NewBlock.vue'
+import HotBlock from '../components/HotBlock.vue'
+import AnnouncementBlock from '../components/AnnouncementBlock.vue'
+import AdBlock from '../components/AdBlock.vue'
+import NewBlock from '../components/NewBlock.vue'
 
 export default {
 

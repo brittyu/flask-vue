@@ -2,19 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const routerOptions = [
-  { path: '/', component: 'Home' },
-  { path: '/category', component: 'Category' },
-  { path: '/hot', component: 'Hot' },
-  { path: '/login', component: 'Login' },
-  { path: '/register', component: 'Register' },
-  { path: '/about', component: 'About' },
-  { path: '*', component: 'NotFound' }
+  { path: '/', view: 'Home' },
+  { path: '/category', view: 'Category' },
+  { path: '/hot', view: 'Hot' },
+  { path: '/login', view: 'Login' },
+  { path: '/register', view: 'Register' },
+  { path: '/message', view: 'Message' },
+  { path: '/about', view: 'About' },
+  { path: '*', view: 'NotFound' }
 ]
 
 const routes = routerOptions.map(route => {
   return {
     ...route,
-    component: () => import(`@/components/${route.component}.vue`)
+    component: () => import(`@/views/${route.view}.vue`)
   }
 })
 
